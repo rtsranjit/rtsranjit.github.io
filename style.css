@@ -1,47 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
+/* Apple-Inspired Portfolio CSS with Smooth Animations */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-header {
-    background-color: #333;
-    color: white;
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
     padding: 20px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+header {
+    padding: 50px 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s ease-out forwards;
 }
 
-nav a:hover {
-    text-decoration: underline;
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0.8;
 }
 
 section {
-    padding: 40px;
-    background: white;
-    margin: 20px auto;
     max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-.project {
-    background: #eee;
-    padding: 15px;
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
     margin: 10px 0;
-    border-radius: 5px;
+}
+
+a {
+    color: #0a84ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.project, .job {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+    margin-top: 50px;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
