@@ -656,34 +656,37 @@ section,
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
-.stats .stats-item {
-  padding: 30px;
-  width: 100%;
-}
-
-.stats .stats-item i {
-  color: var(--accent-color);
-  display: block;
-  font-size: 44px;
-  float: left;
-  line-height: 0;
-}
 
 .stats .stats-item .purecounter {
   color: var(--heading-color);
-  font-size: 48px;
-  line-height: 40px;
-  display: block;
-  font-weight: 700;
-  margin-left: 60px;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 40px;
 }
 
-.stats .stats-item p {
+.project-counter {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
   font-family: var(--heading-font);
-  font-size: 14px;
+  font-size: 20px;
+}
+
+.stats {
+  background-color: transparent;
+}
+
+.project-counter {
+  /* display: flex;
+  align-items: center; */
+  gap: 8px; /* Adjust spacing between number and text */
+}
+
+.project-counter p {
+  margin: 0; /* Remove default margin */
+}
+
+.purecounter::after {
+  content: "+";
+  margin-left: 4px; /* Adjust spacing */
 }
 
 /*--------------------------------------------------------------
